@@ -1,0 +1,2 @@
+language: sb-func
+fprocess: 'java -jar app.jar'
