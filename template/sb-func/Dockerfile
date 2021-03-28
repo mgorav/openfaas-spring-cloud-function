@@ -18,6 +18,7 @@ RUN cd function \
     && cd ../ \
     && mvn clean install -DskipTests
 
+
 FROM openfaas/of-watchdog:0.8.2 as watchdog
 FROM openjdk:11-jre-slim as ship
 RUN apt-get update -qqy \
