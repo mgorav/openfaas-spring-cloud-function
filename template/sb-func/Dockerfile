@@ -39,6 +39,6 @@ ENV fprocess="java -jar app.jar"
 ENV mode="http"
 ENV upstream_url="http://127.0.0.1:5555/"
 
-EXPOSE 5555 5556
+EXPOSE 8080 5555 5556
 
 CMD ["./fwatchdog"]
