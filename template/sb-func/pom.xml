@@ -135,6 +135,7 @@
         </repository>
     </repositories>
     <pluginRepositories>
+
         <pluginRepository>
             <id>spring-release</id>
             <url>http://repo.spring.io/libs-release</url>
