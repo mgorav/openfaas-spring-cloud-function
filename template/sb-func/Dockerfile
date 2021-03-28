@@ -16,7 +16,7 @@ RUN addgroup --system app \
 RUN cd function \
     && mvn clean install \
     && cd ../ \
-    && mvn clean install package -DskipTests
+    && mvn clean install -DskipTests
 
 FROM openfaas/of-watchdog:0.8.2 as watchdog
 FROM openjdk:11-jre-slim as ship
@@ -31,7 +31,7 @@ COPY --from=watchdog  /fwatchdog .
 RUN chmod +x /fwatchdog
 
 
-COPY --from=builder /root/sb-func/target/*.jar app.jar
+COPY --from=builder /root/sb-func/target/openfaas-spring-cloud-function-1.0.0.jar app.jar
 
 #FROM openjdk
 
