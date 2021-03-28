@@ -37,7 +37,7 @@ COPY --from=builder /root/sb-native/target/*.jar app.jar
 
 ENV fprocess="java -jar app.jar"
 ENV mode="http"
-ENV upstream_url="http://127.0.0.1:5678"
+ENV upstream_url="http://127.0.0.1:9898"
 
 EXPOSE 8080 9898 9899
 
